@@ -1,4 +1,4 @@
-RealEstateHub
+**RealEstateHub**
 RealEstateHub is a modern, responsive website for buying, selling, and renting flats and plots. Built with HTML, CSS, and JavaScript, it provides a user-friendly interface and a seamless experience for users looking for real estate options.
 
 Features
