@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #555050;
+    color: #333;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header {
+    background: #863939;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 24px;
+}
+.slogan {
+    text-align: center;
+    font-style: italic;
+    color: #0779e4;
+    margin-bottom: 20px;
+}
+.content {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0779e4;
+}
+.content p {
+    margin-bottom: 10px;
+}
+.about{
+    background-color: #F9B872;
+}

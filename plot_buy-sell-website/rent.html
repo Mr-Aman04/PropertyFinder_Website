@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    position: relative;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    margin: 10px 0;
+}
+
+.product p {
+    color: #333;
+}
+
+.product .price {
+    font-size: 1.2em;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.load-more {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.load-more:hover {
+    background-color: #2980b9;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Product Catalog</h1>
+    <div class="catalog" id="catalog"></div>
+    <button id="loadMore" class="load-more" style="display:none;">See More</button>
+    <script >
+        document.addEventListener("DOMContentLoaded", () => {
+    const catalog = document.getElementById("catalog");
+    const loadMoreButton = document.getElementById("loadMore");
+    let offset = 0;
+    const limit = 5; // Number of products to fetch per request
+
+    const fetchProducts = () => {
+        fetch(`get_products.php?offset=${offset}&limit=${limit}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    renderProducts(data);
+                    offset += limit;
+                    if (data.length === limit) {
+                        loadMoreButton.style.display = 'block';
+                    } else {
+                        loadMoreButton.style.display = 'none';
+                    }
+                }
+            });
+    };
+
+    const renderProducts = (products) => {
+        products.forEach(product => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product");
+            productDiv.innerHTML = `
+                <img src="${product.img}" alt="${product.title}">
+                <h2>${product.title}</h2>
+                <p>${product.description}</p>
+                <p class="price">$${product.price}</p>
+            `;
+            catalog.appendChild(productDiv);
+        });
+    };
+
+    loadMoreButton.addEventListener("click", fetchProducts);
+
+    fetchProducts(); // Initial fetch
+});
+
+    </script>
+</body>
+</html>

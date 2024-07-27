@@ -1,0 +1,137 @@
+body {
+   
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.contact_us {
+    background-color: #F9B872;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1519681393784-d12026796f08?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+}
+
+.contact-section {
+    display: flex;
+    background-color: rgba(48, 44, 44, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(22, 192, 64, 0.5);
+    color: #B6E1E7;
+}
+
+.contact-info {
+    width: 300px;
+    margin-right: 30px;
+}
+
+.contact-form {
+    width: 300px;
+}
+
+h2 {
+    
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.contact-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #B6E1E7;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: aquamarine;
+}
+
+.social-links {
+    display: flex;
+   
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 2em;
+    color: #B6E1E7;
+    transition: color 0.3s;
+    text-decoration: none; 
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: aquamarine;
+    transform: scale(1.2);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+
+    
+    transition: color 0.3s;
+    text-decoration: none; 
+    transition: transform 0.3s ease;
+    
+}
+.contact-form input[type="text"]:hover,
+.contact-form input[type="email"]:hover,
+.contact-form textarea:hover {
+    transform: scale(1.2);
+    border-radius: 10px;
+
+}
+
+.contact-form button {
+    background-color: #f08080;
+    border: none;
+    
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    transition: color 0.3s;
+    text-decoration: none; 
+    transition: transform 0.3s ease;
+    
+}
+
+.contact-form button:hover {
+    
+    background-color: #c94f22;
+    
+    transform: scale(1.2);
+}
